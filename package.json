@@ -1,0 +1,13 @@
+{
+  "name": "dz02-04",
+  "version": "1.0.0",
+  "description": "Domaci zadatak",
+  "author": "Marko Milojevic",
+  "license": "ISC",
+  "devDependencies": {
+    "less": "^2.7.1",
+    "less-mixins": "^1.0.0",
+    "less-plugin-clean-css": "^1.5.1",
+    "normalize.less": "^1.0.0"
+  }
+}

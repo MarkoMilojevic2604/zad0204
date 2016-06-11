@@ -1,0 +1,133 @@
+@import (reference) "_mixins";
+@import (reference) "../node_modules/less-mixins/mixins";
+@import (reference) "_variables";
+
+header.main {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: @header-height;
+  .linear-gradient(@primary, @secondary, @tertiary, 40%);
+
+  .green-background {
+    color: white;
+    background: @secondary;
+    text-shadow: 1px 1px 1px @tertiary;
+    .box-shadow(0px 1px 4px @tertiary inset);
+    .border-radius(10px, 10px, 10px, 10px);
+  }
+
+  .hamburger {
+    float: left;
+    display: block;
+    width: 40px;
+    height: auto;
+    margin: 15px 0 0 10px;
+    padding: 10px 10px 5px 10px;
+    cursor: pointer;
+
+    span {
+      display: block;
+      background: #fff;
+      width: 100%;
+      height: 5px;
+      margin-bottom: 5px;
+      .box-shadow(0px 1px 4px @tertiary);
+      .border-radius(2px, 2px, 2px, 2px);
+    }
+
+    &:hover, &.active {
+      .green-background;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
+
+  nav {
+    position: absolute;
+    top: @header-height;
+    width: 100%;
+    float: left;
+    display: none;
+    padding: 0;
+    background: @tertiary;
+
+    ul {
+      padding: 0;
+      margin: 0;
+
+      li {
+        list-style: none;
+        display: block;
+        float: left;
+        width: 100%;
+        height: auto;
+        margin-right: 20px;
+        padding: 10px;
+        cursor: pointer;
+        color: white;
+        text-shadow: 0px 0px 2px @tertiary;
+        border-bottom: 1px solid #fff;
+
+        &:hover {
+          .green-background;
+          .border-radius(0, 0, 0, 0);
+        }
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      position: static;
+      display: block;
+      width: auto;
+      background: transparent;
+      margin: 20px 0 0 10px;
+
+      ul li {
+        width: auto;
+        height: auto;
+        margin-right: 20px;
+        padding: 10px;
+        cursor: pointer;
+        color: white;
+        text-shadow: 0px 0px 2px @tertiary;
+        border: none;
+
+        &:hover {
+          .border-radius(10px, 10px, 10px, 10px);
+        }
+      }
+    }
+  }
+
+  .input-container {
+    display: block;
+    float: right;
+    position: relative;
+    margin: 20px 10px 0;
+
+    input {
+      border: none;
+      padding: 10px;
+      outline: none;
+      .green-background;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 9px;
+      right: 9px;
+      width: 20px;
+      height: 20px;
+      background: url("../image/search.png") no-repeat;
+      background-size: 100%;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+footer {
+  width: 100%;
+  height: auto;
+  color: #fff;
+  text-shadow: 1px 1px 1px @tertiary;
+  .linear-gradient(@tertiary, @secondary, @primary, 40%);
+
+  nav, article {
+    float: left;
+    width: 100%;
+    padding: 20px;
+    .box-sizing(border-box);
+
+    @media (min-width: @desktop-width) {
+      width: 50%;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      float: left;
+      display: block;
+      width: 100%;
+      list-style: none;
+
+      a {
+        float: left;
+        display: block;
+        width: auto;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  h3, label, p {
+    float: left;
+    display: block;
+    width: 100%;
+    margin: 0 0 10px 0;
+  }
+}

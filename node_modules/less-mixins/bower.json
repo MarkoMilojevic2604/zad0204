@@ -1,0 +1,22 @@
+{
+  "name": "less-mixins-bower",
+  "version": "0.0.1",
+  "homepage": "https://github.com/qrpike/bower-less-mixins",
+  "authors": [
+    "Quinton Pike <qrpike@gmail.com>"
+  ],
+  "description": "Less Mixins for the bower plugin, eg: .rounded, .gradient, etc.",
+  "main": "mixins.less",
+  "keywords": [
+    "less",
+    "mixins"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
